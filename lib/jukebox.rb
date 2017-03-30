@@ -50,22 +50,24 @@ def exit_jukebox
     puts "Goodbye"
 end
 
-def run
+def run(songs)
     help
     puts "Please enter a command:"
     command = gets.chomp
 
-    if input == "list"
-        list
-    elsif input == "play"
-        play
-    elsif input == "exit"
+    binding.pry
+
+    if command == "list"
+        list(songs)
+    elsif command == "play"
+        play(songs)
+    elsif command == "exit"
         exit_jukebox
     else
         puts "Please enter a command:"
     end
 
-    binding.pry
+    # binding.pry
 end
 
-run
+# run(songs)
