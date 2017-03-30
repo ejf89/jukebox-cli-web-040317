@@ -1,0 +1,29 @@
+
+[1mFrom:[0m /home/ericjfarber-57239/code/labs/jukebox-cli-web-040317/lib/jukebox.rb @ line 40 Object#play:
+
+    [1;34m30[0m: [32mdef[0m [1;34mplay[0m(songs)
+    [1;34m31[0m:     puts [31m[1;31m"[0m[31mPlease enter a song name or number:[1;31m"[0m[31m[0m
+    [1;34m32[0m:     input = gets.chomp
+    [1;34m33[0m:     output = [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m34[0m:     [32mif[0m input.length < [1;34m2[0m
+    [1;34m35[0m:         output = songs[input.to_i + [1;34m1[0m]
+    [1;34m36[0m:         puts [31m[1;31m"[0m[31mPlaying #{output}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m37[0m:     [32melsif[0m
+    [1;34m38[0m:         songs.each [32mdo[0m |song|
+    [1;34m39[0m:             [32mif[0m song.include? input
+ => [1;34m40[0m:                 binding.pry
+    [1;34m41[0m:                 output = [31m[1;31m"[0m[31mPlaying [1;31m"[0m[31m[0m + song
+    [1;34m42[0m:                 puts [31m[1;31m"[0m[31mPlaying #{output}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m43[0m:                 [32mbreak[0m
+    [1;34m44[0m:             [32melse[0m
+    [1;34m45[0m:                 output = [31m[1;31m"[0m[31mInvalid input, please try again[1;31m"[0m[31m[0m
+    [1;34m46[0m:             [32mend[0m
+    [1;34m47[0m:         [32mend[0m
+    [1;34m48[0m:             puts [31m[1;31m"[0m[31m#{output}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m49[0m: 
+    [1;34m50[0m:             [1;34m# puts "Invalid input, please try again"[0m
+    [1;34m51[0m:     [32mend[0m
+    [1;34m52[0m:     [1;34m#     songs. {|song|}[0m
+    [1;34m53[0m:     [1;34m# binding.pry[0m
+    [1;34m54[0m: [32mend[0m
+
